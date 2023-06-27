@@ -13,6 +13,6 @@ while(True):
     
   # and 조건으로 다음 분기별 검사 시키기
     # 젤 어린사람 : year, month, day의 최댓값에 모두 충족하는 경우 
-    2222# 젤 많은사람 : year, month, day의 최솟값에 모두 충족하는 경우 
+    # 젤 많은사람 : year, month, day의 최솟값에 모두 충족하는 경우 
                
            
