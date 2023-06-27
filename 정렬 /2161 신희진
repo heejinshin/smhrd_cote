@@ -1,0 +1,11 @@
+# 1부터 N까지의 리스트 받아 생성 
+n = int(input())
+card = [i for i in range(1, n + 1)]
+lst = []   # 정답리스트
+while len(card)!=1:    
+        lst.append(card.pop(0))   # 1) 맨 앞의 원소를 제거 and 정답리스트에 추가
+        card.append(card.pop(0))    # 2) 맨 앞의 원소를 제거 후 뒤로 추가 
+#lst.append(card[0]) # 카드에 하나남은 원소를 정답리스트에 마지막으로 추가
+for l in lst:
+    print(l, end=' ')
+print(card[0])
