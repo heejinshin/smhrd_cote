@@ -1,0 +1,48 @@
+1~5번 입력부분
+44~45번 출력부분 수정 이전
+
+n = int(input())
+name = []
+birthday = []
+birthmonth = []
+birthyear = []
+
+for i in range(1,n+1):
+    name.append(i)
+    birthday.append(i)
+    birthmonth.append(i)
+    birthyear.append(i)
+
+birthMonth = []
+birthmaxMonth = []
+birthDay = []
+birthmaxDay = []    
+
+minyear = min(birthyear)
+maxyear = max(birthyear)
+for i in range(0,n):
+    if birthyear[i] == minyear:
+        birthMonth.append(birthmonth[i])
+    if birthyear[i] == maxyear:
+        birthmaxMonth.append(birthmonth[i])
+        
+minmonth = min(birthMonth)
+maxmonth = max(birthmaxMonth)
+
+for i in range(0,n):
+    if birthmonth[i] == minmonth:
+        birthDay.append(birthday[i])
+    if birthmonth[i] == maxmonth:
+        birthmaxDay.append(birthday[i])
+        
+minday = min(birthDay)
+maxday = max(birthmaxDay)
+
+k = birthday.index(minday)
+j = birthday.index(maxday)
+resultmin = name[k]
+resultmax = name[j]
+
+print(resultmin)
+print(resultmax)
+     
