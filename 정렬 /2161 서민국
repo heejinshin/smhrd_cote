@@ -1,0 +1,13 @@
+def game(i):
+    #카드 덱 생성
+    deck = list(range(1, i + 1))
+    dump_card = []  # 버린 카드
+    while len(deck) > 1:
+        dump_card.append(deck.pop(0))  # 제일 위의 카드를 버림
+        deck.append(deck.pop(0))  # 제일 위의 카드를 제일 아래로
+
+    return dump_card, deck[0]  # 버린 카드들과 남은 카드 return
+
+
+print("버린 카드:", dump_card)
+print("남은 카드:", remain_card)
