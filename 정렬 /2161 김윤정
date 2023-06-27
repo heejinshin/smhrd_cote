@@ -1,0 +1,14 @@
+N = int(input("카드 숫자를 입력하세요:  "))
+card_list = [i for i in range(1, N+1)] #리스트 반복문
+d_card = []
+
+while len(card_list) != 1:
+    d_card.append(card_list.pop(0)) #버리기
+    card_list.append(card_list.pop(0)) #뒤로 보내기 
+
+#버린 카드 리스트 출력
+
+print("버린 카드 숫자는 : ") 
+for i in d_card:
+    print( i, end = ' ')
+print(card_list[0])
