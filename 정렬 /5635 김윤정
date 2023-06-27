@@ -1,0 +1,16 @@
+birth = []
+for _ in range(int(input())): #입력할 명수 입력 (반복문에 _는 변수 없이 반복)
+    n, d, m, y = input().split()  #입력 받은 값을 공백으로 4개 변수에 분리 
+    print(n)
+    print(d)
+    print(m)
+    print(y) 
+    birth.append([n, int(d), int(m), int(y)])
+    print(birth) 
+    #가장 나이 많은 사람은 오름차순으로 정렬 (가장 먼저 태어난 사람)
+birth.sort(key=lambda x:(x[3],x[2],x[1]))
+#이차원 리스트 정렬 검색 
+#람다 변수 x : x[자리수] 기준 
+print(birth)
+print(birth[-1][0]) #가장 적은 사람 => 끝자리 -1 인덱스, 이름 위치 [0] 
+print(birth[0][0]) #가장 나이 많은 사람 => 0번 인덱스. 이름 위치 [0]
