@@ -1,0 +1,17 @@
+def solution(s):
+    answer = []
+    s = s.split(" ")
+    tmp = ''
+    for i in range(len(s)):
+        for j in range(len(s[i])):
+            if(j % 2 == 1):
+                tmp = tmp + s[i][j].lower()
+            else:
+                tmp = tmp + s[i][j].upper()
+        answer.append(tmp)
+        tmp=''
+        # answer = ("TrY","HeLlO","WoRlD")
+        
+    isanghessi = " ".join(answer)
+        
+    return isanghessi
