@@ -1,0 +1,16 @@
+def solution(s, n):
+    answer = ''
+    
+    alpha_up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    alpha_lo = 'abcdefghijklmnopqrstuvwxyz'
+    
+    for i in s: #s에 글자 for문으로 읽어오기 
+        if i == ' ': #공백이 있으면 공백도 추가
+            answer += i
+        elif 'A' <= i <= 'Z': #대문자이면, 문자열 비교 
+            answer += alpha_up[(alpha_up.index(i) + n) % 26]#26개로 나눠주기 알파벳 숫자 26개이므로 'Z' 나올 경우 인덱스 리셋
+        else: #소문자
+            answer += alpha_lo[(alpha_lo.index(i) + n) % 26]
+        
+    
+    return answer
