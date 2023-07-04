@@ -1,15 +1,18 @@
 def solution(n):
     
     list=[] #3진수 담을 리스트 
-    result=0 #10진수 결과 
+    result=0 #3진수 => 10진수
 
     while n!=0: 
         list.append(n%3) #3으로 나눈 나머지 
         n=n//3 #3으로 나눈 몫 
     
+        print(list)
+        print(n)
+    
         answer =0
         for i in range(len(list)): 
             result = ((3**(len(list)-i-1))*list[i]) 
-            answer  += result 
+            answer += result #각 자리별 합산 10진수 만들기 
     
     return answer
