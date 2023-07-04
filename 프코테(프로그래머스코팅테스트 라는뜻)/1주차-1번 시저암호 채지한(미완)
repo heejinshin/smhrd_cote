@@ -1,0 +1,16 @@
+def solution(s, n):
+    answer = ''
+    Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    
+    for i in s:
+        if s[i].isupper():
+            
+        elif s[i].islower():
+        
+        else:
+            answer.append(' ')
+            
+        
+    
+    return answer
