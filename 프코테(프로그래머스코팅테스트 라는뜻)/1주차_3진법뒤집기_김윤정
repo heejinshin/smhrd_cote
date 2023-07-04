@@ -6,10 +6,7 @@ def solution(n):
     while n!=0: 
         list.append(n%3) #3으로 나눈 나머지 
         n=n//3 #3으로 나눈 몫 
-    
-        print(list)
-        print(n)
-    
+
         answer =0
         for i in range(len(list)): 
             result = ((3**(len(list)-i-1))*list[i]) 
