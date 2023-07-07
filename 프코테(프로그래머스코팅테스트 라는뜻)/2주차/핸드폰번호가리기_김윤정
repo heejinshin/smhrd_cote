@@ -1,0 +1,8 @@
+def solution(phone_number):
+    ph=[]
+    for i in range(len(phone_number)):
+        ph.append(phone_number[i])
+        if i < len(phone_number)-4:
+            ph[i]=("*")
+    answer = "".join(ph)
+    return answer
