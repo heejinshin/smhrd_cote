@@ -1,0 +1,15 @@
+phone_num = "01011112222" 
+phone_num2 = "023334444"   
+phone_num
+# while(True):  # 네개 남을때까지? 
+    #문자열을 돌면서 문자들을 *로 처리하고 마지막 4개의 문자는 그대로 출력 
+# 원소 돌기 
+# for num in phone_num:
+
+#길이로 돌기
+cnt = 0
+for i in range(len(phone_num)):
+    print('*', end="")
+    # 질문 : 문자열 길이가 다양한데 뒤에서 4자리 남은지를 어떻게 알아내나. 
+#     cnt++
+    if phone_num
