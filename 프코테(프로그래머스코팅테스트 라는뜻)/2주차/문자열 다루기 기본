@@ -1,0 +1,17 @@
+def solution(s):
+    if len(s)==4 or len(s)==6: #길이 4 혹은 6 
+        if s.isdecimal(): #숫자인지 확인하는 함수 
+            return True
+        else:
+            return  False
+    else: 
+        return  False
+
+
+- 참고하면 좋을 만한 새로운 함수 
+    - isdigit():
+    >> 단일 글자가 '숫자' 모양으로 생겼으면 무조건 True를 반환하는 함수. 즉, 숫자처럼 생긴 '모든 글자'를 숫자로
+    - isnumeric(): 
+    >> 숫자값 표현에 해당하는 문자열까지 인정한다. 제곱근 및 분수, 거듭제곱 특수문자도 isnumeric() 함수는 True를 반환
+    - isdecimal() :
+    >>함수는 주어진 문자열이 int형으로 변환이 가능한지 알아내는 함수이기 때문에 특수문자 중 숫자모양을 숫자로 치지않는다
