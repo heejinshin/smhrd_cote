@@ -1,0 +1,25 @@
+def solution(num):
+
+    if num==1:
+        answer=0
+        if answer is not None: #함수 안에서 변수=0이면 초기화 되어 null로 출력
+                                #숫자 0으로 리턴하기 위해 is not None 처리
+            return answer
+            
+
+    else:
+        answer=0    
+        while num!=1: #1이 아닐 때까지 반복
+        
+            if answer >= 500: #500번 이상이면 -1 출력
+                answer=(-1)
+                break
+    
+            if num%2==0: #짝수 
+                num=int(num/2)
+                answer+=1 #반복횟수 더하기 
+        
+            else: #홀수
+                num=int((num*3)+1)
+                answer+=1 #반복횟수 더하기 
+        return answer
