@@ -1,0 +1,31 @@
+def solution(answers):
+    count1 = 0
+    count2 = 0
+    count3 = 0
+    answer = []
+    sp1 = [1, 2, 3, 4, 5]
+    sp2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    sp3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    
+    for i in range(len(answers)):
+        if answers[i] == sp1[(i%5)]:
+            count1 += 1
+        if answers[i] == sp2[(i%8)]:
+            count2 += 1
+        if answers[i] == sp3[(i%10)]:
+            count3 += 1
+            
+    maxCnt = count1
+    if maxCnt < count2:
+        maxCnt = count2
+    if maxCnt < count3:
+        maxCnt = count3
+        
+    if maxCnt == count1:
+        answer.append(1)
+    if maxCnt == count2: # 공동1등이 생길수 있으므로 elif가 아닌 if로 접근
+        answer.append(2)
+    if maxCnt == count3:
+        answer.append(3)
+    
+    return answer
