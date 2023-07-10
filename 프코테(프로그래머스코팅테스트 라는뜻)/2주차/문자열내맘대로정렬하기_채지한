@@ -1,0 +1,11 @@
+def solution(strings, n):
+    answer = []
+    result = []
+    for i in strings:
+        answer.append(i[n]+' '+i) #sun의 경우 u sun으로 출력이 됨
+    answer=sorted(answer)
+    for i in answer:
+        a = i.split(' ') # 공백간격으로 띄우고
+        result.append(a[1]) # 첫번째인덱스들만 append
+    
+    return result
