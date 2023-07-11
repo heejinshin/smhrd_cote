@@ -1,0 +1,14 @@
+
+def solution(s, n):
+    result = ""
+    for i in range(len(s)):
+        if ord(s[i]) == 122 or ord(s[i]) == 90:
+            position = ord(s[i])-26+n
+        else:
+            position = ord(s[i])+n
+        if len(s)>1:
+            if s[1] == " ":
+                result += chr(position)+" "
+            else:
+                result += chr(position)
+    return result 
