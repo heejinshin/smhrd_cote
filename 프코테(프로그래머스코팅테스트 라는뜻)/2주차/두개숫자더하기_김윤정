@@ -1,0 +1,8 @@
+def solution(numbers):
+    answer = set()
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)):
+            answer.add(numbers[i] + numbers[j]) #다음 숫자랑 더하기
+    answer = list(answer) #리스트로 만들기
+    answer.sort()  #정렬
+    return answer
