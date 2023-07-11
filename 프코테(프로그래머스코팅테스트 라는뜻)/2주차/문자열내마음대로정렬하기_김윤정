@@ -1,0 +1,7 @@
+strings= ["sun", "bed", "car"]
+def solution(strings, n):
+    return sorted(strings, key=lambda x:(x[n],x)) #sorted() 함수와 람다식 활용 
+
+
+람다식 정리 잘 해놓은 블로그 
+https://velog.io/@aonee/Python-%EC%A0%95%EB%A0%AC-sort-sorted-reverse
