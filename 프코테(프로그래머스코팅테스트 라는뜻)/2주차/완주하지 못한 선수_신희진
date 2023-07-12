@@ -1,0 +1,12 @@
+ def solution(p, c):
+    result = ""
+    for i in p:
+        if i in c:   # 참여자 중 완료자 명단에 있는 사랄 i
+            if p.count(i)>1:   # 근데 그 참여자가 동명이인이 있을때 
+                result += i
+            else: 
+                continue
+        else:    # 완료자 명단에 없는사람 
+            result += i
+        return result
+        
