@@ -1,0 +1,10 @@
+def solution(participant, completion):
+    
+    participant.sort() #참가자 정렬
+    completion.sort()  #완주자 정렬
+    
+    for i in range(len(completion)): 완주자수로 반복문
+        if participant[i] !=completion[i]: #참가자와 완주자가 일치하지 않을 경우 
+            return participant[i] #일치하지 않는 값 반환
+        
+    return participant[len(participant)-1]  
